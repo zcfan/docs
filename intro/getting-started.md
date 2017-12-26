@@ -101,6 +101,7 @@ module.exports = {
 
 ```javascript
 import Nerv from 'nervjs'
+// import { Component, createElement } from 'nervjs'
 
 class Hello extends Nerv.Component {
   constructor () {
@@ -133,7 +134,7 @@ Nerv.render(<Hello />, document.getElementById('app'))
 
 最后在`package.json`文件的`scripts`字段中增加
 
-```
+```json
 "scripts": {
   "dev": "webpack-dev-server --config webpack.config.js"
 }
@@ -145,12 +146,12 @@ Nerv.render(<Hello />, document.getElementById('app'))
 
 注意：使用的时候需要配合babel的[@babel/plugin-transform-react-jsx](https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-react-jsx)插件来将JSX转换的创建虚拟DOM的代码替换成使用Nerv的API，使用方式如下
 
-```
+```json
 {
   ...
   "plugins": [
     ["@babel/plugin-transform-react-jsx", {
-      "pragma": "Nerv.createElement"
+      "pragma": "Nerv.createElement" // 如果你 import { createElement } from 'nervjs' 的话，那这里设置成 `createElement` 就行了
     }]
   ]
 }
