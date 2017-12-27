@@ -1,0 +1,13 @@
+{
+  "name": "nerv-docs",
+  "version": "1.0.0",
+  "description": "Docs for Nerv.js",
+  "main": "index.js",
+  "repository": "git@github.com:NervJS/docs.git",
+  "author": "yuche <i@yuche.me>",
+  "license": "MIT",
+  "dependencies": {
+    "gh-pages": "^1.1.0",
+    "gitbook-cli": "^2.3.2"
+  }
+}

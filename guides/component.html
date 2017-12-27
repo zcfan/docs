@@ -1,0 +1,497 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>组件 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="devtools.html" />
+    
+    
+    <link rel="prev" href="jsx.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Nerv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    认识Nerv
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../intro/overview.html">
+            
+                <a href="../intro/overview.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../intro/getting-started.html">
+            
+                <a href="../intro/getting-started.html">
+            
+                    
+                    快速开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    指南
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="virtual-dom.html">
+            
+                <a href="virtual-dom.html">
+            
+                    
+                    Virtual DOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="jsx.html">
+            
+                <a href="jsx.html">
+            
+                    
+                    JSX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="component.html">
+            
+                <a href="component.html">
+            
+                    
+                    组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="devtools.html">
+            
+                <a href="devtools.html">
+            
+                    
+                    Devtools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="api.html">
+            
+                <a href="api.html">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="switching-to-nerv.html">
+            
+                <a href="switching-to-nerv.html">
+            
+                    
+                    从 React 切换到 Nerv
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >组件</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7EC4;&#x4EF6;">&#x7EC4;&#x4EF6;</h1>
+<p>&#x6211;&#x4EEC;&#x7684;&#x9875;&#x9762;&#x4E00;&#x822C;&#x90FD;&#x662F;&#x7531;&#x5404;&#x79CD;&#x5404;&#x6837;&#x7684;&#x7EC4;&#x4EF6;&#x6784;&#x6210;&#x7684;&#xFF0C;&#x7EC4;&#x4EF6;&#x5C31;&#x50CF;&#x4E00;&#x4E2A;&#x4E00;&#x4E2A;&#x79EF;&#x6728;&#x4E00;&#x6837;&#xFF0C;&#x88AB;&#x7528;&#x6765;&#x642D;&#x5EFA;&#x6210;&#x9875;&#x9762;&#x3002;&#x4F8B;&#x5982;&#x4E00;&#x4E2A;&#x5E26;&#x6709;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x3001;logo&#x7684;&#x5934;&#x90E8;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF0C;&#x800C;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x3001;logo&#x4E5F;&#x8BB8;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x72EC;&#x7ACB;&#x7EC4;&#x4EF6;&#x3002;&#x7EC4;&#x4EF6;&#x5316;&#x53EF;&#x4EE5;&#x8BA9;&#x6211;&#x4EEC;&#x628A;&#x4E00;&#x4E2A;&#x5E9E;&#x5927;&#x7684;&#x9875;&#x9762;&#x5207;&#x5272;&#x6210;&#x4E00;&#x4E2A;&#x4E00;&#x4E2A;&#x5C0F;&#x5757;&#x6765;&#x5206;&#x522B;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5206;&#x800C;&#x6CBB;&#x4E4B;&#x7684;&#x601D;&#x60F3;&#xFF0C;&#x540C;&#x65F6;&#x7EC4;&#x4EF6;&#x5316;&#x4E5F;&#x80FD;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x66F4;&#x597D;&#x5730;&#x8FDB;&#x884C;&#x4EE3;&#x7801;&#x590D;&#x7528;&#x3002;</p>
+<div align="center">
+  <img src="http://storage.360buyimg.com/mtd/home/wx20171225-111010-2x1514171469651.jpg" width="500">
+</div>
+
+<p><code>Nerv</code>&#x5929;&#x751F;&#x662F;&#x652F;&#x6301;&#x7EC4;&#x4EF6;&#x5316;&#x7684;&#xFF0C;&#x7EC4;&#x4EF6;&#x662F;<code>Nerv</code>&#x4E2D;&#x7684;&#x6838;&#x5FC3;&#x6982;&#x5FF5;&#x3002;<code>Nerv</code>&#x4E2D;&#x7684;&#x7EC4;&#x4EF6;&#x5206;&#x4E3A;Stateful Component&#x3001;Stateless Component &#x4EE5;&#x53CA; PureComponent&#x3002;</p>
+<h2 id="stateless-component">Stateless Component</h2>
+<p>Stateless Component&#xFF08;&#x65E0;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;&#xFF09;&#x662F;&#x4E00;&#x4E2A;&#x7EAF;&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x610F;&#x5473;&#x7740;&#x53EA;&#x6E32;&#x67D3; Class Component &#x7684; <code>render()</code> &#x51FD;&#x6570;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x4F7F;&#x7528; JSX&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Hello</span> (<span class="hljs-params"> { text } </span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span> Hello, { text } <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>
+}
+</code></pre>
+<p>&#x4F7F;&#x7528; <code>createElement</code>:</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Hello</span> (<span class="hljs-params"> { text } </span>) </span>{
+  <span class="hljs-keyword">return</span> createElement(<span class="hljs-string">&apos;span&apos;</span>, <span class="hljs-literal">null</span>, text)
+}
+</code></pre>
+<p>Stateless Component &#x6B63;&#x5982;&#x5B83;&#x7684;&#x540D;&#x5B57;&#x4E00;&#x6837;&#x2014;&#x2014;&#x6CA1;&#x6709; state&#x3002;&#x4F46;&#x5B83;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x53C2;&#x6570; <code>props</code>&#xFF0C;&#x5F53; <code>props</code> &#x6539;&#x53D8;&#x7684;&#x65F6;&#x5019;&#xFF0C;Nerv &#x4F1A;&#x6839;&#x636E;&#x65B0;&#x65E7; props &#x8FD4;&#x56DE;&#x5185;&#x5BB9;&#x7684;&#x4E0D;&#x540C;&#x800C;&#x53BB;&#x6E32;&#x67D3;&#x7EC4;&#x4EF6;&#x3002;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x548C; Class Component &#x4E0D;&#x540C;&#x7684;&#x5730;&#x65B9;&#x5728;&#x4E8E;&#xFF0C;Stateless Component &#x6CA1;&#x6709;&#x5B8C;&#x6574;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x3002;&#xFF08;&#x548C; React &#x4E0D;&#x4E00;&#x6837;&#x7684;&#x5730;&#x65B9;&#xFF09;&#x5728; Nerv &#x91CC;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x53EB; <code>onShouldComponentUpdate</code> &#x7684; <code>props</code> &#x6765;&#x624B;&#x52A8;&#x5224;&#x5B9A;&#x8BE5;&#x7EC4;&#x4EF6;&#x662F;&#x5426;&#x88AB;&#x66F4;&#x65B0;&#x3002;</p>
+<h2 id="class-component">Class Component</h2>
+<p>&#x8FD9;&#x4E00;&#x7C7B;&#x7EC4;&#x4EF6;&#x9700;&#x8981;&#x7EE7;&#x627F; <code>Nerv</code> &#x7684; <code>Component</code> &#x7C7B;&#xFF0C;&#x4F8B;&#x5982;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> Nerv <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;nervjs&apos;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Username</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Nerv</span>.<span class="hljs-title">Component</span> </span>{
+  <span class="hljs-keyword">constructor</span> () {
+    <span class="hljs-keyword">super</span>(...arguments)
+    <span class="hljs-keyword">this</span>.state = {}
+  }
+
+  render () {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Hi, Tony<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+  }
+}
+</code></pre>
+<h3 id="setstate"><code>setState</code></h3>
+<p>ES2015 Component &#x662F;&#x5E26;&#x6709;&#x81EA;&#x8EAB;&#x72B6;&#x6001;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x7EC4;&#x4EF6;&#x7684;&#x5185;&#x90E8;&#x8C03;&#x7528; <code>this.setState</code> &#x65B9;&#x6CD5;&#x6765;&#x6539;&#x53D8;&#x7EC4;&#x4EF6;&#x7684;&#x72B6;&#x6001;&#x3002;&#x6BCF;&#x6B21; <code>setState</code> &#x4E4B;&#x540E; Nerv &#x5C06;&#x4F1A;&#x628A; <code>state</code> &#x6682;&#x5B58;&#x5230;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x4E00;&#x4E2A; eventloop &#x7684; microtask &#x5408;&#x5E76;&#x6700;&#x7EC8;&#x7684; <code>state</code>&#xFF0C;&#x5BF9;&#x6BD4;&#x65B0;&#x65E7; <code>state</code> &#x521B;&#x5EFA;&#x7684;&#x865A;&#x62DF; DOM &#x5BF9;&#x8C61;&#x7684;&#x4E0D;&#x540C;&#xFF0C;&#x7136;&#x540E;&#x5BF9;&#x771F;&#x5B9E; DOM &#x8FDB;&#x884C;&#x66F4;&#x65B0;&#x3002;&#x6216;&#x8005;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8C03;&#x7528; <code>this.forceUpdate()</code> &#x5F3A;&#x5236;&#x5BF9;&#x6BD4;&#x65B0;&#x65E7;&#x865A;&#x62DF; DOM&#xFF0C;&#x7136;&#x540E;&#x66F4;&#x65B0;&#x3002;</p>
+<h3 id="forceupdate"><code>forceUpdate</code></h3>
+<p>&#x4E00;&#x822C;&#x800C;&#x8A00;&#xFF0C;&#x6BCF;&#x6B21; <code>setState()</code> &#x66F4;&#x65B0;&#x72B6;&#x6001;&#x90FD;&#x662F;&#x5F02;&#x6B65;&#x7684;&#xFF0C;&#x5E76;&#x4E14; Nerv &#x5185;&#x90E8;&#x4F1A;&#x5BF9;&#x6BD4;&#x65B0;&#x65E7;&#x865A;&#x62DF; DOM &#x7684;&#x4E0D;&#x540C;&#x4E4B;&#x5904;&#x518D;&#x8FDB;&#x884C;&#x66F4;&#x65B0;&#x3002;&#x4F46;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>forceUpdate()</code> &#x76F4;&#x63A5;&#x7ACB;&#x5373;&#x8FDB;&#x884C;&#x4E00;&#x6B21;&#x5F3A;&#x5236;&#x7684;&#x540C;&#x6B65;&#x66F4;&#x65B0;&#xFF0C;<code>forceUpdate()</code> &#x7684;&#x9020;&#x6210;&#x7684;&#x66F4;&#x65B0;&#x548C; <code>setState()</code> &#x7684;&#x66F4;&#x65B0;&#x4E00;&#x6837;&#xFF0C;&#x4F1A;&#x8D70;&#x5B8C;&#x6574;&#x4E2A;&#x7684;&#x7EC4;&#x4EF6;&#x751F;&#x547D;&#x5468;&#x671F;&#x6D41;&#x7A0B;&#x3002;</p>
+<h3 id="defaultprops"><code>defaultProps</code></h3>
+<p><code>defaultProps</code> &#x662F;&#x4E00;&#x4E2A; <code>Nerv.Component</code> &#x7684;<em>&#x53EF;&#x9009;</em>&#x9759;&#x6001;&#x5C5E;&#x6027;&#xFF0C;&#x5F53;&#x4E00;&#x4E2A; Component &#x5B9E;&#x4F8B;&#x5316;&#x4E86;&#x4E4B;&#x540E;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x5199;&#x6210;&#x4E86; JSX &#x7684;&#x5F62;&#x5F0F;&#x6216;&#x8005;&#x76F4;&#x63A5;&#x88AB; <code>createElement</code> &#x8C03;&#x7528;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4F20;&#x5165;&#x76F8;&#x5E94;&#x7684; <code>props</code> &#xFF0C;&#x5C31;&#x4F1A;&#x7ED9;&#x5B83;&#x4F20;&#x5165;&#x9ED8;&#x8BA4;&#x7684; <code>defaultProps</code>&#x3002;<code>defaultProps</code> &#x53EA;&#x5728;&#x6CA1;&#x6709;&#x4F20;&#x5165; <code>props</code> &#x65F6;&#xFF08;&#x4E5F;&#x5C31;&#x662F; <code>props</code> &#x662F; <code>undefined</code> &#x65F6;&#xFF09;&#x8D77;&#x4F5C;&#x7528;&#xFF0C;&#x5F53; <code>props</code> &#x662F; <code>null</code> &#x65F6;&#x4E0D;&#x4F1A;&#x4F20;&#x5165; <code>defaultProps</code>&#x3002;</p>
+<pre><code class="lang-js">class CustomButton extends React.Component {
+  static defaultProps = {
+    color: &apos;blue&apos;
+  }
+  // ...
+}
+
+### `render()`
+
+&#x4E00;&#x4E2A; `render()` &#x51FD;&#x6570;*&#x5FC5;&#x987B;*&#x8FD4;&#x56DE;&#x5185;&#x5BB9;&#xFF0C;&#x8FD4;&#x56DE;&#x5185;&#x5BB9;&#x662F;&#x8BE5;&#x7EC4;&#x4EF6;&#x5C06;&#x8981;&#x88AB;&#x6E32;&#x67D3;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5B83;&#x4EEC;&#x5FC5;&#x987B;&#x662F;&#x4EE5;&#x4E0B;&#x662F;&#x5176;&#x4E2D;&#x4EFB;&#x610F;&#x4E00;&#x79CD;&#x7C7B;&#x578B;&#xFF1A;
+
+1. Nerv &#x7EC4;&#x4EF6;&#x3002;&#x7531; JSX &#x521B;&#x5EFA;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A; Component&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x7EAF;&#x7CB9;&#x7684; JSX &#x521B;&#x5EFA;&#x7684;&#x865A;&#x62DF; DOM&#xFF0C;&#x6216;&#x8005;&#x901A;&#x8FC7; `createPortal` &#x521B;&#x5EFA;&#x7684;&#x5185;&#x5BB9;&#xFF1B;
+2. &#x5B57;&#x7B26;&#x4E32;&#x6216;&#x6570;&#x5B57;&#x3002;&#x8FD9;&#x4E24;&#x6837;&#x5185;&#x5BB9;&#x4F1A;&#x88AB;&#x6E32;&#x67D3;&#x6210; DOM &#x4E2D;&#x7684;&#x6587;&#x672C;&#x8282;&#x70B9;&#xFF1B;
+3. `null`&#x3002;&#x8FD4;&#x56DE; `Null` &#x65F6; Nerv &#x4EC0;&#x4E48;&#x4E5F;&#x4E0D;&#x6E32;&#x67D3;&#xFF1B;
+4. &#x5E03;&#x5C14;&#x503C;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x5199;&#x4F60;&#x7684;&#x903B;&#x8F91; `return condition &amp;&amp; &lt;App /&gt;`, &#x5F53; `condition` &#x4E3A; `false` &#x65F6; Nerv &#x4E5F;&#x4E0D;&#x4F1A;&#x6E32;&#x67D3;&#x4EFB;&#x4F55;&#x5185;&#x5BB9;&#x3002;
+
+// &#x6216;&#x8005;&#x8FD9;&#x6837;&#xFF1A;
+CustomButton.defaultProps = {
+  color: &apos;blue&apos;
+};
+</code></pre>
+<h3 id="&#x7EC4;&#x4EF6;&#x751F;&#x547D;&#x5468;&#x671F;">&#x7EC4;&#x4EF6;&#x751F;&#x547D;&#x5468;&#x671F;</h3>
+<p>&#x751F;&#x547D;&#x5468;&#x671F;&#x662F;&#x6307;&#x7EC4;&#x4EF6;&#x4ECE;&#x521B;&#x5EFA;&#x5230;&#x9500;&#x6BC1;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x751F;&#x547D;&#x8FC7;&#x7A0B;&#xFF0C;<code>Nerv</code>&#x901A;&#x8FC7;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x51FD;&#x6570;&#x6765;&#x63A7;&#x5236;&#x7EC4;&#x4EF6;&#x5728;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x5404;&#x4E2A;&#x9636;&#x6BB5;&#x7684;&#x52A8;&#x4F5C;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x540D;&#x79F0;</th>
+<th style="text-align:center">&#x8C03;&#x7528;&#x65F6;&#x673A;</th>
+<th style="text-align:center">&#x4F20;&#x5165;&#x53C2;&#x6570;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>componentWillUnmount</code></td>
+<td style="text-align:center">&#x7EC4;&#x4EF6;&#x5373;&#x5C06;&#x8981;&#x4ECE; DOM &#x4E2D;&#x5378;&#x8F7D;</td>
+<td style="text-align:center">&#x7A7A;</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>componentWillMount</code></td>
+<td style="text-align:center">&#x7EC4;&#x4EF6;&#x5373;&#x5C06;&#x8981;&#x52A0;&#x8F7D;&#x5230; DOM &#x4E2D;</td>
+<td style="text-align:center">&#x7A7A;</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>componentDidMount</code></td>
+<td style="text-align:center">&#x7EC4;&#x4EF6;&#x5DF2;&#x52A0;&#x8F7D;&#x5230; DOM &#x4E2D;</td>
+<td style="text-align:center">&#x7A7A;</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>componentDidUnmount</code></td>
+<td style="text-align:center">&#x7EC4;&#x4EF6;&#x5DF2;&#x4ECE; DOM &#x4E2D;&#x5378;&#x8F7D;</td>
+<td style="text-align:center">&#x7A7A;</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>componentWillReceiveProps</code></td>
+<td style="text-align:center">&#x65B0;&#x7684; <code>props</code> &#x4F20;&#x5165;&#x7EC4;&#x4EF6;&#x4E4B;&#x524D;</td>
+<td style="text-align:center"><code>nextProps</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>shouldComponentUpdate</code></td>
+<td style="text-align:center">&#x624B;&#x52A8;&#x5224;&#x65AD;&#x662F;&#x5426;&#x8981;&#x66F4;&#x65B0;&#x7EC4;&#x4EF6;&#xFF0C;&#x8FD4;&#x56DE; <code>false</code> &#x5C06;&#x4E0D;&#x4F1A;&#x8C03;&#x7528; <code>render()</code></td>
+<td style="text-align:center"><code>nextProps</code>, <code>nextState</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>componentWillUpdate</code></td>
+<td style="text-align:center">&#x7EC4;&#x4EF6;&#x5373;&#x5C06;&#x8981;&#x66F4;&#x65B0;&#xFF0C;&#x5728; <code>render()</code> &#x4E4B;&#x524D;</td>
+<td style="text-align:center"><code>lastProps</code>, <code>nextProps</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>componentDidUpdate</code></td>
+<td style="text-align:center">&#x7EC4;&#x4EF6;&#x5DF2;&#x7ECF;&#x66F4;&#x65B0;&#xFF0C;&#x5728; <code>render()</code> &#x4E4B;&#x540E;</td>
+<td style="text-align:center"><code>lastProps</code>, <code>nextProps</code></td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://i.loli.net/2017/12/27/5a4336d23ebd4.png" alt="&#x7EC4;&#x4EF6;&#x751F;&#x547D;&#x5468;&#x671F;">
+<img src="https://i.loli.net/2017/12/27/5a4336d23ee19.png" alt="&#x7EC4;&#x4EF6;&#x751F;&#x547D;&#x5468;&#x671F;"></p>
+<h2 id="purecomponent"><code>PureComponent</code></h2>
+<p><code>PureComponent</code> &#x4E0E; <code>Component</code> &#x51E0;&#x4E4E;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#xFF0C;&#x4F46; <code>PureComponent</code> &#x901A;&#x8FC7; prop &#x548C; state &#x7684;&#x6D45;&#x5BF9;&#x6BD4;&#x6765;&#x5B9E;&#x73B0; <code>shouldComponentUpate()</code>&#x3002;</p>
+<p>&#x5982;&#x679C; Nerv &#x7EC4;&#x4EF6;&#x7684; <code>render()</code> &#x51FD;&#x6570;&#x5728;&#x7ED9;&#x5B9A;&#x76F8;&#x540C;&#x7684; props &#x548C; state &#x4E0B;&#x6E32;&#x67D3;&#x4E3A;&#x76F8;&#x540C;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x5728;&#x67D0;&#x4E9B;&#x573A;&#x666F;&#x4E0B;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>PureComponent</code> &#x6765;&#x63D0;&#x5347;&#x6027;&#x80FD;&#x3002;</p>
+<blockquote>
+<p><code>PureComponent</code> &#x7684; <code>shouldComponentUpdate()</code> &#x53EA;&#x4F1A;&#x5BF9;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x6D45;&#x5BF9;&#x6BD4;&#x3002;&#x5982;&#x679C;&#x5BF9;&#x8C61;&#x5305;&#x542B;&#x590D;&#x6742;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x5B83;&#x53EF;&#x80FD;&#x4F1A;&#x56E0;&#x6DF1;&#x5C42;&#x7684;&#x6570;&#x636E;&#x4E0D;&#x4E00;&#x81F4;&#x800C;&#x4EA7;&#x751F;&#x9519;&#x8BEF;&#x7684;&#x5426;&#x5B9A;&#x5224;&#x65AD;(&#x8868;&#x73B0;&#x4E3A;&#x5BF9;&#x8C61;&#x6DF1;&#x5C42;&#x7684;&#x6570;&#x636E;&#x5DF2;&#x6539;&#x53D8;&#x89C6;&#x56FE;&#x5374;&#x6CA1;&#x6709;&#x66F4;&#x65B0;)&#x3002;&#x5F53;&#x4F60;&#x671F;&#x671B;&#x53EA;&#x62E5;&#x6709;&#x7B80;&#x5355;&#x7684; props &#x548C; state &#x65F6;&#xFF0C;&#x624D;&#x53BB;&#x7EE7;&#x627F; <code>PureComponent</code> &#xFF0C;&#x6216;&#x8005;&#x5728;&#x4F60;&#x77E5;&#x9053;&#x6DF1;&#x5C42;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x5DF2;&#x7ECF;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x65F6;&#x4F7F;&#x7528; <code>forceUpate()</code> &#x3002;&#x6216;&#x8005;&#xFF0C;&#x8003;&#x8651;&#x4F7F;&#x7528; <a href="https://facebook.github.io/immutable-js/" target="_blank">&#x4E0D;&#x53EF;&#x53D8;&#x5BF9;&#x8C61;</a> &#x6765;&#x4FC3;&#x8FDB;&#x5D4C;&#x5957;&#x6570;&#x636E;&#x7684;&#x5FEB;&#x901F;&#x6BD4;&#x8F83;&#x3002;</p>
+<p>&#x6B64;&#x5916;,<code>PureComponent</code> &#x7684; <code>shouldComponentUpate()</code> &#x4F1A;&#x5FFD;&#x7565;&#x6574;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;&#x5B50;&#x7EA7;&#x3002;&#x8BF7;&#x786E;&#x4FDD;&#x6240;&#x6709;&#x7684;&#x5B50;&#x7EA7;&#x7EC4;&#x4EF6;&#x4E5F;&#x662F;&quot;Pure&quot;&#x7684;&#x3002;</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="jsx.html" class="navigation navigation-prev " aria-label="Previous page: JSX">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="devtools.html" class="navigation navigation-next " aria-label="Next page: Devtools">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"组件","level":"1.3.3","depth":2,"next":{"title":"Devtools","level":"1.3.4","depth":2,"path":"guides/devtools.md","ref":"guides/devtools.md","articles":[]},"previous":{"title":"JSX","level":"1.3.2","depth":2,"path":"guides/jsx.md","ref":"guides/jsx.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"guides/component.md","mtime":"2017-12-27T07:37:02.251Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-27T16:32:46.838Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
