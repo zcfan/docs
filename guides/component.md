@@ -107,3 +107,13 @@ CustomButton.defaultProps = {
 ![组件生命周期](https://i.loli.net/2017/12/27/5a4336d23ebd4.png)
 ![组件生命周期](https://i.loli.net/2017/12/27/5a4336d23ee19.png)
 
+## `PureComponent`
+
+`PureComponent` 与 `Component` 几乎完全相同，但 `PureComponent` 通过 prop 和 state 的浅对比来实现 `shouldComponentUpate()`。
+
+如果 Nerv 组件的 `render()` 函数在给定相同的 props 和 state 下渲染为相同的结果，在某些场景下你可以使用 `PureComponent` 来提升性能。
+
+
+> `PureComponent` 的 `shouldComponentUpdate()` 只会对对象进行浅对比。如果对象包含复杂的数据结构，它可能会因深层的数据不一致而产生错误的否定判断(表现为对象深层的数据已改变视图却没有更新)。当你期望只拥有简单的 props 和 state 时，才去继承 `PureComponent` ，或者在你知道深层的数据结构已经发生改变时使用 `forceUpate()` 。或者，考虑使用 [不可变对象](https://facebook.github.io/immutable-js/) 来促进嵌套数据的快速比较。
+>
+> 此外,`PureComponent` 的 `shouldComponentUpate()` 会忽略整个组件的子级。请确保所有的子级组件也是"Pure"的。
