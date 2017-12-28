@@ -4,7 +4,7 @@
   "description": "Docs for Nerv.js",
   "main": "index.js",
   "repository": "git@github.com:NervJS/docs.git",
-  "author": "yuche <i@yuche.me>",
+  "author": "o2labs",
   "license": "MIT",
   "scripts": {
     "book": "gitbook build",

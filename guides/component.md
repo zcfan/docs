@@ -6,7 +6,7 @@
   <img src="http://storage.360buyimg.com/mtd/home/wx20171225-111010-2x1514171469651.jpg" width="500">
 </div>
 
-`Nerv`天生是支持组件化的，组件是`Nerv`中的核心概念。`Nerv`中的组件分为Stateful Component、Stateless Component 以及 PureComponent。
+`Nerv`天生是支持组件化的，组件是`Nerv`中的核心概念。`Nerv`中的组件分为 Class Component、Stateless Component 以及 PureComponent。
 
 ## Stateless Component
 
@@ -59,6 +59,20 @@ ES2015 Component 是带有自身状态的组件，你可以在组件的内部调
 ### `forceUpdate`
 
 一般而言，每次 `setState()` 更新状态都是异步的，并且 Nerv 内部会对比新旧虚拟 DOM 的不同之处再进行更新。但你可以通过调用 `forceUpdate()` 直接立即进行一次强制的同步更新，`forceUpdate()` 的造成的更新和 `setState()` 的更新一样，会走完整个的组件生命周期流程。
+
+### `dangerouslySetInnerHTML`
+
+`dangerouslySetInnerHTML` 是 Nerv 提供的替换浏览器 DOM 中的 `innerHTML` 接口的一个函数。一般而言，使用 JavaScript 代码设置 HTML 文档的内容是危险的，因为这样很容易把你的用户信息暴露给跨站脚本攻击.所以，你虽然可以直接在 Nerv 中设置 HTML 的内容，但你要使用 `dangerouslySetInnerHTML` 并向该函数传递一个含有 `__html` 键的对象，用来提醒你自己这样做很危险。例如：
+
+```js
+function createMarkup() {
+  return {__html: 'First &middot; Second'};
+}
+
+function MyComponent() {
+  return <div dangerouslySetInnerHTML={createMarkup()} />;
+}
+```
 
 
 ### `defaultProps`
