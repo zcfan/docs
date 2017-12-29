@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="devtools.html" />
+    <link rel="next" href="refs.html" />
     
     
     <link rel="prev" href="jsx.html" />
@@ -200,7 +200,46 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="devtools.html">
+        <li class="chapter " data-level="1.3.4" data-path="refs.html">
+            
+                <a href="refs.html">
+            
+                    
+                    引用（Refs）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="event.html">
+            
+                <a href="event.html">
+            
+                    
+                    事件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="error.html">
+            
+                <a href="error.html">
+            
+                    
+                    错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="devtools.html">
             
                 <a href="devtools.html">
             
@@ -213,7 +252,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5" data-path="api.html">
+        <li class="chapter " data-level="1.3.8" data-path="api.html">
             
                 <a href="api.html">
             
@@ -226,7 +265,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.6" data-path="switching-to-nerv.html">
+        <li class="chapter " data-level="1.3.9" data-path="switching-to-nerv.html">
             
                 <a href="switching-to-nerv.html">
             
@@ -295,7 +334,7 @@
   <img src="http://storage.360buyimg.com/mtd/home/wx20171225-111010-2x1514171469651.jpg" width="500">
 </div>
 
-<p><code>Nerv</code>&#x5929;&#x751F;&#x662F;&#x652F;&#x6301;&#x7EC4;&#x4EF6;&#x5316;&#x7684;&#xFF0C;&#x7EC4;&#x4EF6;&#x662F;<code>Nerv</code>&#x4E2D;&#x7684;&#x6838;&#x5FC3;&#x6982;&#x5FF5;&#x3002;<code>Nerv</code>&#x4E2D;&#x7684;&#x7EC4;&#x4EF6;&#x5206;&#x4E3A;Stateful Component&#x3001;Stateless Component &#x4EE5;&#x53CA; PureComponent&#x3002;</p>
+<p><code>Nerv</code>&#x5929;&#x751F;&#x662F;&#x652F;&#x6301;&#x7EC4;&#x4EF6;&#x5316;&#x7684;&#xFF0C;&#x7EC4;&#x4EF6;&#x662F;<code>Nerv</code>&#x4E2D;&#x7684;&#x6838;&#x5FC3;&#x6982;&#x5FF5;&#x3002;<code>Nerv</code>&#x4E2D;&#x7684;&#x7EC4;&#x4EF6;&#x5206;&#x4E3A; Class Component&#x3001;Stateless Component &#x4EE5;&#x53CA; PureComponent&#x3002;</p>
 <h2 id="stateless-component">Stateless Component</h2>
 <p>Stateless Component&#xFF08;&#x65E0;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;&#xFF09;&#x662F;&#x4E00;&#x4E2A;&#x7EAF;&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x610F;&#x5473;&#x7740;&#x53EA;&#x6E32;&#x67D3; Class Component &#x7684; <code>render()</code> &#x51FD;&#x6570;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
 <p>&#x4F7F;&#x7528; JSX&#xFF1A;</p>
@@ -330,6 +369,16 @@
 <p>ES2015 Component &#x662F;&#x5E26;&#x6709;&#x81EA;&#x8EAB;&#x72B6;&#x6001;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x7EC4;&#x4EF6;&#x7684;&#x5185;&#x90E8;&#x8C03;&#x7528; <code>this.setState</code> &#x65B9;&#x6CD5;&#x6765;&#x6539;&#x53D8;&#x7EC4;&#x4EF6;&#x7684;&#x72B6;&#x6001;&#x3002;&#x6BCF;&#x6B21; <code>setState</code> &#x4E4B;&#x540E; Nerv &#x5C06;&#x4F1A;&#x628A; <code>state</code> &#x6682;&#x5B58;&#x5230;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x4E00;&#x4E2A; eventloop &#x7684; microtask &#x5408;&#x5E76;&#x6700;&#x7EC8;&#x7684; <code>state</code>&#xFF0C;&#x5BF9;&#x6BD4;&#x65B0;&#x65E7; <code>state</code> &#x521B;&#x5EFA;&#x7684;&#x865A;&#x62DF; DOM &#x5BF9;&#x8C61;&#x7684;&#x4E0D;&#x540C;&#xFF0C;&#x7136;&#x540E;&#x5BF9;&#x771F;&#x5B9E; DOM &#x8FDB;&#x884C;&#x66F4;&#x65B0;&#x3002;&#x6216;&#x8005;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8C03;&#x7528; <code>this.forceUpdate()</code> &#x5F3A;&#x5236;&#x5BF9;&#x6BD4;&#x65B0;&#x65E7;&#x865A;&#x62DF; DOM&#xFF0C;&#x7136;&#x540E;&#x66F4;&#x65B0;&#x3002;</p>
 <h3 id="forceupdate"><code>forceUpdate</code></h3>
 <p>&#x4E00;&#x822C;&#x800C;&#x8A00;&#xFF0C;&#x6BCF;&#x6B21; <code>setState()</code> &#x66F4;&#x65B0;&#x72B6;&#x6001;&#x90FD;&#x662F;&#x5F02;&#x6B65;&#x7684;&#xFF0C;&#x5E76;&#x4E14; Nerv &#x5185;&#x90E8;&#x4F1A;&#x5BF9;&#x6BD4;&#x65B0;&#x65E7;&#x865A;&#x62DF; DOM &#x7684;&#x4E0D;&#x540C;&#x4E4B;&#x5904;&#x518D;&#x8FDB;&#x884C;&#x66F4;&#x65B0;&#x3002;&#x4F46;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>forceUpdate()</code> &#x76F4;&#x63A5;&#x7ACB;&#x5373;&#x8FDB;&#x884C;&#x4E00;&#x6B21;&#x5F3A;&#x5236;&#x7684;&#x540C;&#x6B65;&#x66F4;&#x65B0;&#xFF0C;<code>forceUpdate()</code> &#x7684;&#x9020;&#x6210;&#x7684;&#x66F4;&#x65B0;&#x548C; <code>setState()</code> &#x7684;&#x66F4;&#x65B0;&#x4E00;&#x6837;&#xFF0C;&#x4F1A;&#x8D70;&#x5B8C;&#x6574;&#x4E2A;&#x7684;&#x7EC4;&#x4EF6;&#x751F;&#x547D;&#x5468;&#x671F;&#x6D41;&#x7A0B;&#x3002;</p>
+<h3 id="dangerouslysetinnerhtml"><code>dangerouslySetInnerHTML</code></h3>
+<p><code>dangerouslySetInnerHTML</code> &#x662F; Nerv &#x63D0;&#x4F9B;&#x7684;&#x66FF;&#x6362;&#x6D4F;&#x89C8;&#x5668; DOM &#x4E2D;&#x7684; <code>innerHTML</code> &#x63A5;&#x53E3;&#x7684;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x3002;&#x4E00;&#x822C;&#x800C;&#x8A00;&#xFF0C;&#x4F7F;&#x7528; JavaScript &#x4EE3;&#x7801;&#x8BBE;&#x7F6E; HTML &#x6587;&#x6863;&#x7684;&#x5185;&#x5BB9;&#x662F;&#x5371;&#x9669;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x6837;&#x5F88;&#x5BB9;&#x6613;&#x628A;&#x4F60;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x66B4;&#x9732;&#x7ED9;&#x8DE8;&#x7AD9;&#x811A;&#x672C;&#x653B;&#x51FB;.&#x6240;&#x4EE5;&#xFF0C;&#x4F60;&#x867D;&#x7136;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728; Nerv &#x4E2D;&#x8BBE;&#x7F6E; HTML &#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4F46;&#x4F60;&#x8981;&#x4F7F;&#x7528; <code>dangerouslySetInnerHTML</code> &#x5E76;&#x5411;&#x8BE5;&#x51FD;&#x6570;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x542B;&#x6709; <code>__html</code> &#x952E;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x7528;&#x6765;&#x63D0;&#x9192;&#x4F60;&#x81EA;&#x5DF1;&#x8FD9;&#x6837;&#x505A;&#x5F88;&#x5371;&#x9669;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createMarkup</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> {__html: <span class="hljs-string">&apos;First &amp;middot; Second&apos;</span>};
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">MyComponent</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">dangerouslySetInnerHTML</span>=<span class="hljs-string">{createMarkup()}</span> /&gt;</span>;
+}
+</span></code></pre>
 <h3 id="defaultprops"><code>defaultProps</code></h3>
 <p><code>defaultProps</code> &#x662F;&#x4E00;&#x4E2A; <code>Nerv.Component</code> &#x7684;<em>&#x53EF;&#x9009;</em>&#x9759;&#x6001;&#x5C5E;&#x6027;&#xFF0C;&#x5F53;&#x4E00;&#x4E2A; Component &#x5B9E;&#x4F8B;&#x5316;&#x4E86;&#x4E4B;&#x540E;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x5199;&#x6210;&#x4E86; JSX &#x7684;&#x5F62;&#x5F0F;&#x6216;&#x8005;&#x76F4;&#x63A5;&#x88AB; <code>createElement</code> &#x8C03;&#x7528;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4F20;&#x5165;&#x76F8;&#x5E94;&#x7684; <code>props</code> &#xFF0C;&#x5C31;&#x4F1A;&#x7ED9;&#x5B83;&#x4F20;&#x5165;&#x9ED8;&#x8BA4;&#x7684; <code>defaultProps</code>&#x3002;<code>defaultProps</code> &#x53EA;&#x5728;&#x6CA1;&#x6709;&#x4F20;&#x5165; <code>props</code> &#x65F6;&#xFF08;&#x4E5F;&#x5C31;&#x662F; <code>props</code> &#x662F; <code>undefined</code> &#x65F6;&#xFF09;&#x8D77;&#x4F5C;&#x7528;&#xFF0C;&#x5F53; <code>props</code> &#x662F; <code>null</code> &#x65F6;&#x4E0D;&#x4F1A;&#x4F20;&#x5165; <code>defaultProps</code>&#x3002;</p>
 <pre><code class="lang-js">class CustomButton extends React.Component {
@@ -447,7 +496,7 @@ CustomButton.defaultProps = {
                 </a>
                 
                 
-                <a href="devtools.html" class="navigation navigation-next " aria-label="Next page: Devtools">
+                <a href="refs.html" class="navigation navigation-next " aria-label="Next page: 引用（Refs）">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -458,7 +507,7 @@ CustomButton.defaultProps = {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"组件","level":"1.3.3","depth":2,"next":{"title":"Devtools","level":"1.3.4","depth":2,"path":"guides/devtools.md","ref":"guides/devtools.md","articles":[]},"previous":{"title":"JSX","level":"1.3.2","depth":2,"path":"guides/jsx.md","ref":"guides/jsx.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"guides/component.md","mtime":"2017-12-27T07:37:02.251Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-27T16:32:46.838Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"组件","level":"1.3.3","depth":2,"next":{"title":"引用（Refs）","level":"1.3.4","depth":2,"path":"guides/refs.md","ref":"guides/refs.md","articles":[]},"previous":{"title":"JSX","level":"1.3.2","depth":2,"path":"guides/jsx.md","ref":"guides/jsx.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"guides/component.md","mtime":"2017-12-28T08:08:24.488Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-29T07:05:58.898Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

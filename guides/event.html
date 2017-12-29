@@ -1,0 +1,536 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>事件处理 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="error.html" />
+    
+    
+    <link rel="prev" href="refs.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Nerv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    认识Nerv
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../intro/overview.html">
+            
+                <a href="../intro/overview.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../intro/getting-started.html">
+            
+                <a href="../intro/getting-started.html">
+            
+                    
+                    快速开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    指南
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="virtual-dom.html">
+            
+                <a href="virtual-dom.html">
+            
+                    
+                    Virtual DOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="jsx.html">
+            
+                <a href="jsx.html">
+            
+                    
+                    JSX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="component.html">
+            
+                <a href="component.html">
+            
+                    
+                    组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="refs.html">
+            
+                <a href="refs.html">
+            
+                    
+                    引用（Refs）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.5" data-path="event.html">
+            
+                <a href="event.html">
+            
+                    
+                    事件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="error.html">
+            
+                <a href="error.html">
+            
+                    
+                    错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="devtools.html">
+            
+                <a href="devtools.html">
+            
+                    
+                    Devtools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="api.html">
+            
+                <a href="api.html">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="switching-to-nerv.html">
+            
+                <a href="switching-to-nerv.html">
+            
+                    
+                    从 React 切换到 Nerv
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >事件处理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4E8B;&#x4EF6;&#x5904;&#x7406;">&#x4E8B;&#x4EF6;&#x5904;&#x7406;</h1>
+<p>Nerv &#x5143;&#x7D20;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x548C; DOM &#x5143;&#x7D20;&#x7684;&#x5F88;&#x76F8;&#x4F3C;&#x3002;&#x4F46;&#x662F;&#x6709;&#x4E00;&#x70B9;&#x8BED;&#x6CD5;&#x4E0A;&#x7684;&#x4E0D;&#x540C;: Nerv &#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;&#x5C5E;&#x6027;&#x7684;&#x547D;&#x540D;&#x91C7;&#x7528;&#x9A7C;&#x5CF0;&#x5F0F;&#x5199;&#x6CD5;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5C0F;&#x5199;&#x3002;
+&#x5982;&#x679C;&#x91C7;&#x7528; JSX &#x7684;&#x8BED;&#x6CD5;&#x4F60;&#x9700;&#x8981;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;(DOM&#x5143;&#x7D20;&#x7684;&#x5199;&#x6CD5;)
+&#x4F8B;&#x5982;&#xFF0C;&#x4F20;&#x7EDF;&#x7684; HTML&#xFF1A;</p>
+<pre><code class="lang-jsx">&lt;button onclick=&quot;activateLasers()&quot;&gt;
+  Activate Lasers
+&lt;/button&gt;
+</code></pre>
+<p>Nerv &#x4E2D;&#x7A0D;&#x7A0D;&#x6709;&#x70B9;&#x4E0D;&#x540C;&#xFF1A;</p>
+<pre><code class="lang-jsx">&lt;button onClick={activateLasers}&gt;
+  Activate Lasers
+&lt;/button&gt;
+</code></pre>
+<p>&#x5728; Nerv &#x4E2D;&#x53E6;&#x4E00;&#x4E2A;&#x4E0D;&#x540C;&#x662F;&#x4F60;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x8FD4;&#x56DE; false &#x7684;&#x65B9;&#x5F0F;&#x963B;&#x6B62;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x3002;&#x4F60;&#x5FC5;&#x987B;&#x660E;&#x786E;&#x7684;&#x4F7F;&#x7528; preventDefault&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4F20;&#x7EDF;&#x7684; HTML &#x4E2D;&#x963B;&#x6B62;&#x94FE;&#x63A5;&#x9ED8;&#x8BA4;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x65B0;&#x9875;&#x9762;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x5199;&#xFF1A;</p>
+<pre><code class="lang-jsx">&lt;a href=&quot;#&quot; onclick=&quot;console.log(&apos;The link was clicked.&apos;); return false&quot;&gt;
+  Click me
+&lt;/a&gt;
+</code></pre>
+<p>&#x5728; Nerv&#xFF0C;&#x5E94;&#x8BE5;&#x8FD9;&#x6837;&#x6765;&#x5199;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ActionLink</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleClick</span>(<span class="hljs-params">e</span>) </span>{
+    e.preventDefault();
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;The link was clicked.&apos;</span>);
+  }
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{handleClick}</span>&gt;</span>
+      Click me
+    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span>
+  );
+}
+</code></pre>
+<p>&#x4F7F;&#x7528; Nerv &#x7684;&#x65F6;&#x5019;&#x901A;&#x5E38;&#x4F60;&#x4E0D;&#x9700;&#x8981;&#x4F7F;&#x7528; addEventListener &#x4E3A;&#x4E00;&#x4E2A;&#x5DF2;&#x521B;&#x5EFA;&#x7684; DOM &#x5143;&#x7D20;&#x6DFB;&#x52A0;&#x76D1;&#x542C;&#x5668;&#x3002;&#x4F60;&#x4EC5;&#x4EC5;&#x9700;&#x8981;&#x5728;&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x521D;&#x59CB;&#x6E32;&#x67D3;&#x7684;&#x65F6;&#x5019;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x76D1;&#x542C;&#x5668;&#x3002;</p>
+<p>&#x5F53;&#x4F60;&#x4F7F;&#x7528; ES6 class &#x8BED;&#x6CD5;&#x6765;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x5668;&#x4F1A;&#x6210;&#x4E3A;&#x7C7B;&#x7684;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4E0B;&#x9762;&#x7684; Toggle &#x7EC4;&#x4EF6;&#x6E32;&#x67D3;&#x4E00;&#x4E2A;&#x8BA9;&#x7528;&#x6237;&#x5207;&#x6362;&#x5F00;&#x5173;&#x72B6;&#x6001;&#x7684;&#x6309;&#x94AE;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Toggle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Nerv</span>.<span class="hljs-title">Component</span> </span>{
+  <span class="hljs-keyword">constructor</span>(props) {
+    <span class="hljs-keyword">super</span>(props);
+    <span class="hljs-keyword">this</span>.state = {isToggleOn: <span class="hljs-literal">true</span>};
+
+    <span class="hljs-comment">// This binding is necessary to make `this` work in the callback</span>
+    <span class="hljs-keyword">this</span>.handleClick = <span class="hljs-keyword">this</span>.handleClick.bind(<span class="hljs-keyword">this</span>);
+  }
+
+  handleClick() {
+    <span class="hljs-keyword">this</span>.setState(prevState =&gt; ({
+      isToggleOn: !prevState.isToggleOn
+    }));
+  }
+
+  render() {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{this.handleClick}</span>&gt;</span>
+        {this.state.isToggleOn ? &apos;ON&apos; : &apos;OFF&apos;}
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
+    );
+  }
+}
+
+Nerv.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Toggle</span> /&gt;</span>,
+  document.getElementById(&apos;root&apos;)
+);
+</span></code></pre>
+<p>&#x4F60;&#x5FC5;&#x987B;&#x8C28;&#x614E;&#x5BF9;&#x5F85; JSX &#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4E2D;&#x7684; <code>this</code>&#xFF0C;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#x9ED8;&#x8BA4;&#x662F;&#x4E0D;&#x4F1A;&#x7ED1;&#x5B9A; <code>this</code> &#x7684;&#x3002;&#x5982;&#x679C;&#x4F60;&#x5FD8;&#x8BB0;&#x7ED1;&#x5B9A; <code>this.handleClick</code> &#x5E76;&#x628A;&#x5B83;&#x4F20;&#x5165; onClick, &#x5F53;&#x4F60;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019; <code>this</code> &#x7684;&#x503C;&#x4F1A;&#x662F; <code>undefined</code>&#x3002;</p>
+<p>&#x8FD9;&#x5E76;&#x4E0D;&#x662F; Nerv &#x7684;&#x7279;&#x6B8A;&#x884C;&#x4E3A;&#xFF1B;&#x5B83;&#x662F;&#x51FD;&#x6570;&#x5982;&#x4F55;&#x5728; JavaScript &#x4E2D;&#x8FD0;&#x884C;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x6CA1;&#x6709;&#x5728;&#x65B9;&#x6CD5;&#x540E;&#x9762;&#x6DFB;&#x52A0; <code>()</code> &#xFF0C;&#x4F8B;&#x5982; <code>onClick={this.handleClick}</code>&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x4E3A;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7ED1;&#x5B9A; <code>this</code>&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F7F;&#x7528; <code>bind</code> &#x8BA9;&#x4F60;&#x5F88;&#x56F0;&#x60D1;&#xFF0C;&#x8FD9;&#x91CC;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x3002;&#x5982;&#x679C;&#x4F60;&#x6B63;&#x5728;&#x4F7F;&#x7528;&#x5B9E;&#x9A8C;&#x6027;&#x7684;<a href="https://babeljs.io/docs/plugins/transform-class-properties/" target="_blank">&#x5C5E;&#x6027;&#x521D;&#x59CB;&#x5316;&#x5668;&#x8BED;&#x6CD5;</a>&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5C5E;&#x6027;&#x521D;&#x59CB;&#x5316;&#x5668;&#x6765;&#x6B63;&#x786E;&#x7684;&#x7ED1;&#x5B9A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LoggingButton</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Nerv</span>.<span class="hljs-title">Component</span> </span>{
+  handleClick = () =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;this is:&apos;</span>, <span class="hljs-keyword">this</span>);
+  }
+
+  render() {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{this.handleClick}</span>&gt;</span>
+        Click me
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
+    );
+  }
+}
+</code></pre>
+<p>&#x5982;&#x679C;&#x4F60;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x5C5E;&#x6027;&#x521D;&#x59CB;&#x5316;&#x5668;&#x8BED;&#x6CD5;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4E2D;&#x4F7F;&#x7528; &#x7BAD;&#x5934;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LoggingButton</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Nerv</span>.<span class="hljs-title">Component</span> </span>{
+  handleClick() {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;this is:&apos;</span>, <span class="hljs-keyword">this</span>);
+  }
+
+  render() {
+    <span class="hljs-comment">// This syntax ensures `this` is bound within handleClick</span>
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{(e)</span> =&gt;</span> this.handleClick(e)}&gt;
+        Click me
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
+    );
+  }
+}
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x8BED;&#x6CD5;&#x6709;&#x4E2A;&#x95EE;&#x9898;&#x5C31;&#x662F;&#x6BCF;&#x6B21; LoggingButton &#x6E32;&#x67D3;&#x7684;&#x65F6;&#x5019;&#x90FD;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;&#x5728;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD9;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#x3002;&#x7136;&#x800C;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x503C;&#x4F20;&#x5165;&#x4F4E;&#x9636;&#x7EC4;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E9B;&#x7EC4;&#x4EF6;&#x53EF;&#x80FD;&#x4F1A;&#x8FDB;&#x884C;&#x989D;&#x5916;&#x7684;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x3002;&#x6211;&#x4EEC;&#x901A;&#x5E38;&#x5EFA;&#x8BAE;&#x5728;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E2D;&#x7ED1;&#x5B9A;&#x6216;&#x4F7F;&#x7528;&#x5C5E;&#x6027;&#x521D;&#x59CB;&#x5316;&#x5668;&#x8BED;&#x6CD5;&#x6765;&#x907F;&#x514D;&#x8FD9;&#x7C7B;&#x6027;&#x80FD;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x5411;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x4F20;&#x9012;&#x53C2;&#x6570;
+&#x901A;&#x5E38;&#x6211;&#x4EEC;&#x4F1A;&#x4E3A;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x4F20;&#x9012;&#x989D;&#x5916;&#x7684;&#x53C2;&#x6570;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x82E5;&#x662F; id &#x662F;&#x4E00;&#x4E2A;&#x5185;&#x8054; id&#xFF0C;&#x4EE5;&#x4E0B;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x90FD;&#x53EF;&#x4EE5;&#x5411;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x4F20;&#x9012;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-jsx">&lt;button onClick={(e) =&gt; this.deleteRow(id, e)}&gt;Delete Row&lt;/button&gt;
+&lt;button onClick={this.deleteRow.bind(this, id)}&gt;Delete Row&lt;/button&gt;
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x662F;&#x7B49;&#x4EF7;&#x7684;&#xFF0C;&#x5206;&#x522B;&#x901A;&#x8FC7; arrow functions &#x548C; Function.prototype.bind &#x6765;&#x4E3A;&#x7279;&#x5B9A;&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;&#x6DFB;&#x52A0;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x3002;</p>
+<p>&#x4E0A;&#x9762;&#x4E24;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x53C2;&#x6570; e &#x4F5C;&#x4E3A; Nerv &#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x5C06;&#x4F1A;&#x88AB;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x4F20;&#x9012;&#x3002;&#x901A;&#x8FC7;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x5FC5;&#x987B;&#x663E;&#x5F0F;&#x7684;&#x8FDB;&#x884C;&#x4F20;&#x9012;&#xFF0C;&#x4F46;&#x662F;&#x901A;&#x8FC7; bind &#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x4EE5;&#x53CA;&#x66F4;&#x591A;&#x7684;&#x53C2;&#x6570;&#x5C06;&#x4F1A;&#x88AB;&#x9690;&#x5F0F;&#x7684;&#x8FDB;&#x884C;&#x4F20;&#x9012;&#x3002;</p>
+<p>&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x901A;&#x8FC7; bind &#x65B9;&#x5F0F;&#x5411;&#x76D1;&#x542C;&#x51FD;&#x6570;&#x4F20;&#x53C2;&#xFF0C;&#x5728;&#x7C7B;&#x7EC4;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x76D1;&#x542C;&#x51FD;&#x6570;&#xFF0C;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61; e &#x8981;&#x6392;&#x5728;&#x6240;&#x4F20;&#x9012;&#x53C2;&#x6570;&#x7684;&#x540E;&#x9762;&#xFF0C;&#x4F8B;&#x5982;:</p>
+<pre><code class="lang-jsx"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Popper</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Nerv</span>.<span class="hljs-title">Component</span></span>{
+    <span class="hljs-keyword">constructor</span>(){
+        <span class="hljs-keyword">super</span>();
+        <span class="hljs-keyword">this</span>.state = {name:<span class="hljs-string">&apos;Hello world!&apos;</span>};
+    }
+
+    preventPop(name, e){    <span class="hljs-comment">//&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;e&#x8981;&#x653E;&#x5728;&#x6700;&#x540E;</span>
+        e.preventDefault();
+        alert(name);
+    }
+
+    render(){
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>hello<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{this.preventPop.bind(this,</span> <span class="hljs-attr">this.state.name</span>)}&gt;</span>Click<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        );
+    }
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="refs.html" class="navigation navigation-prev " aria-label="Previous page: 引用（Refs）">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="error.html" class="navigation navigation-next " aria-label="Next page: 错误处理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"事件处理","level":"1.3.5","depth":2,"next":{"title":"错误处理","level":"1.3.6","depth":2,"path":"guides/error.md","ref":"guides/error.md","articles":[]},"previous":{"title":"引用（Refs）","level":"1.3.4","depth":2,"path":"guides/refs.md","ref":"guides/refs.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"guides/event.md","mtime":"2017-12-28T08:54:59.193Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-29T07:05:58.898Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
