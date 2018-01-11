@@ -2,7 +2,7 @@
 
 ## Nerv
 
-Nerv是一款基于virtual dom技术的类React UI框架，它基于React标准，拥有和React一致的API与生命周期，对于熟悉React的开发者来说Nerv可以快速上手进行开发。得益于与React保持一致API的特性，Nerv可以无缝兼容到React的相关生态，例如[react-router](https://github.com/ReactTraining/react-router)，[react-redux](https://github.com/reactjs/react-redux)，以及大部门使用React开发的组件，所以对于旧的React项目，可以无痛地将React替换成Nerv。
+Nerv是一款基于virtual dom技术的类React UI框架，它基于React标准，拥有和React一致的API与生命周期，对于熟悉React的开发者来说Nerv可以快速上手进行开发。得益于与React保持一致API的特性，Nerv可以无缝兼容到React的相关生态，例如[react-router](https://github.com/ReactTraining/react-router)，[react-redux](https://github.com/reactjs/react-redux)，以及大部分使用React开发的组件，所以对于旧的React项目，可以无痛地将React替换成Nerv。
 
 那么有了React珠玉在前，为什么我们还是需要Nerv呢？
 
