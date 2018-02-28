@@ -86,6 +86,7 @@ class CustomButton extends React.Component {
   }
   // ...
 }
+```
 
 ### `render()`
 
@@ -96,6 +97,7 @@ class CustomButton extends React.Component {
 3. `null`。返回 `Null` 时 Nerv 什么也不渲染；
 4. 布尔值。你可以这样写你的逻辑 `return condition && <App />`, 当 `condition` 为 `false` 时 Nerv 也不会渲染任何内容。
 
+```js
 // 或者这样：
 CustomButton.defaultProps = {
   color: 'blue'
