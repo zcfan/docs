@@ -58,7 +58,7 @@ ES2015 Component 是带有自身状态的组件，你可以在组件的内部调
 
 ### `forceUpdate`
 
-一般而言，每次 `setState()` 更新状态都是异步的，并且 Nerv 内部会对比新旧虚拟 DOM 的不同之处再进行更新。但你可以通过调用 `forceUpdate()` 直接立即进行一次强制的同步更新，`forceUpdate()` 的造成的更新和 `setState()` 的更新一样，会走完整个的组件生命周期流程。
+一般而言，每次 `setState()` 更新状态都是异步的，并且 Nerv 内部会对比新旧虚拟 DOM 的不同之处再进行更新。但你可以通过调用 `forceUpdate()` 直接立即进行一次强制的同步更新，`forceUpdate()` 的造成的更新和 `setState()` 的更新一样，会走完整个的组件生命周期流程。
 
 ### `dangerouslySetInnerHTML`
 
@@ -77,7 +77,7 @@ function MyComponent() {
 
 ### `defaultProps`
 
-`defaultProps` 是一个 `Nerv.Component` 的*可选*静态属性，当一个 Component 实例化了之后（也就是写成了 JSX 的形式或者直接被 `createElement` 调用），如果没有传入相应的 `props` ，就会给它传入默认的 `defaultProps`。`defaultProps` 只在没有传入 `props` 时（也就是 `props` 是 `undefined` 时）起作用，当 `props` 是 `null` 时不会传入 `defaultProps`。
+`defaultProps` 是一个 `Nerv.Component` 的*可选*静态属性，当一个 Component 实例化了之后（也就是写成了 JSX 的形式或者直接被 `createElement` 调用），如果没有传入相应的 `props` ，就会给它传入默认的 `defaultProps`。`defaultProps` 只在没有传入 `props` 时（也就是 `props` 是 `undefined` 时）起作用，当 `props` 是 `null` 时不会传入 `defaultProps`。
 
 ```js
 class CustomButton extends React.Component {
@@ -89,9 +89,9 @@ class CustomButton extends React.Component {
 
 ### `render()`
 
-一个 `render()` 函数*必须*返回内容，返回内容是该组件将要被渲染的内容，它们必须是以下是其中任意一种类型：
+一个 `render()` 函数*必须*返回内容，返回内容是该组件将要被渲染的内容，它们必须是以下是其中任意一种类型：
 
-1. Nerv 组件。由 JSX 创建的组件，它可以是一个 Component，也可以是纯粹的 JSX 创建的虚拟 DOM，或者通过 `createPortal` 创建的内容；
+1. Nerv 组件。由 JSX 创建的组件，它可以是一个 Component，也可以是纯粹的 JSX 创建的虚拟 DOM，或者通过 `createPortal` 创建的内容；
 2. 字符串或数字。这两样内容会被渲染成 DOM 中的文本节点；
 3. `null`。返回 `Null` 时 Nerv 什么也不渲染；
 4. 布尔值。你可以这样写你的逻辑 `return condition && <App />`, 当 `condition` 为 `false` 时 Nerv 也不会渲染任何内容。
@@ -102,13 +102,13 @@ CustomButton.defaultProps = {
 };
 ```
 
-### 组件生命周期
+### 组件生命周期
 
 生命周期是指组件从创建到销毁一个完整的生命过程，`Nerv`通过定义了一系列的函数来控制组件在生命周期的各个阶段的动作。
 
-名称 | 调用时机 | 传入参数
+名称 | 调用时机 | 传入参数
 :---: | :---: | :---:
-`componentWillUnmount` | 组件即将要从 DOM 中卸载 | 空
+`componentWillUnmount` | 组件即将要从 DOM 中卸载 | 空
 `componentWillMount` | 组件即将要加载到 DOM 中 | 空
 `componentDidMount` | 组件已加载到 DOM 中 | 空
 `componentDidUnmount` | 组件已从 DOM 中卸载 | 空
@@ -123,11 +123,11 @@ CustomButton.defaultProps = {
 
 ## `PureComponent`
 
-`PureComponent` 与 `Component` 几乎完全相同，但 `PureComponent` 通过 prop 和 state 的浅对比来实现 `shouldComponentUpate()`。
+`PureComponent` 与 `Component` 几乎完全相同，但 `PureComponent` 通过 prop 和 state 的浅对比来实现 `shouldComponentUpate()`。
 
 如果 Nerv 组件的 `render()` 函数在给定相同的 props 和 state 下渲染为相同的结果，在某些场景下你可以使用 `PureComponent` 来提升性能。
 
 
-> `PureComponent` 的 `shouldComponentUpdate()` 只会对对象进行浅对比。如果对象包含复杂的数据结构，它可能会因深层的数据不一致而产生错误的否定判断(表现为对象深层的数据已改变视图却没有更新)。当你期望只拥有简单的 props 和 state 时，才去继承 `PureComponent` ，或者在你知道深层的数据结构已经发生改变时使用 `forceUpate()` 。或者，考虑使用 [不可变对象](https://facebook.github.io/immutable-js/) 来促进嵌套数据的快速比较。
+> `PureComponent` 的 `shouldComponentUpdate()` 只会对对象进行浅对比。如果对象包含复杂的数据结构，它可能会因深层的数据不一致而产生错误的否定判断(表现为对象深层的数据已改变视图却没有更新)。当你期望只拥有简单的 props 和 state 时，才去继承 `PureComponent` ，或者在你知道深层的数据结构已经发生改变时使用 `forceUpate()` 。或者，考虑使用 [不可变对象](https://facebook.github.io/immutable-js/) 来促进嵌套数据的快速比较。
 >
-> 此外,`PureComponent` 的 `shouldComponentUpate()` 会忽略整个组件的子级。请确保所有的子级组件也是"Pure"的。
+> 此外,`PureComponent` 的 `shouldComponentUpate()` 会忽略整个组件的子级。请确保所有的子级组件也是"Pure"的。

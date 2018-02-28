@@ -1,8 +1,8 @@
-# 从 React 切换到 Nerv
+# 从 React 切换到 Nerv
 
 Nerv 提供了比 React 更好的浏览器兼容性和更高的性能，与此同时也不会放弃 React 庞大的生态系统。兼容 React 生态系统是我们开发 Nerv 的重要目标之一。
 
-假设我们有这样一段代码：
+假设我们有这样一段代码：
 
 ```js
 var React = require('react');
@@ -19,7 +19,7 @@ ReactDOM.render(<MyComponent />, node);
 
 我们迁移的目标就是更改一些配置，但是不用改变代码本身任意一行。
 
-## 目前支持的特性
+## 目前支持的特性
 
 ### `react`
 

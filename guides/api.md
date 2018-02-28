@@ -38,7 +38,7 @@ Nerv.createElement(
 
 `Nerv.DOM` 提供了DOM组件的 `Nerv.createElement()` 的便捷包装。举个例子，`Nerv.DOM.a(...)` 是 `Nerv.createELement('a', ...)` 的一个便捷包装。这个用法被认为是过时的，我们推荐您使用JSX，或者直接使用 `Nerv.createElement()` 。
 
-用 [`JSX`](./component.md) 编写的代码会被转换成用 `Nerv.createElement()` 实现。如果使用了JSX，你通常不会直接调用 `Nerv.createElement()` 。
+用 [`JSX`](./component.md) 编写的代码会被转换成用 `Nerv.createElement()` 实现。如果使用了JSX，你通常不会直接调用 `Nerv.createElement()` 。
 
 * * *
 
@@ -52,7 +52,7 @@ Nerv.cloneElement(
 )
 ```
 
-以 `element` 作为起点，克隆并返回一个新的Nerv元素(Nerv Element)。生成的元素将会拥有原始元素props与新props的浅合并。新的子级会替换现有的子级。来自原始元素的 `key` 和 `ref` 将会保留。
+以 `element` 作为起点，克隆并返回一个新的Nerv元素(Nerv Element)。生成的元素将会拥有原始元素props与新props的浅合并。新的子级会替换现有的子级。来自原始元素的 `key` 和 `ref` 将会保留。
 
 `Nerv.cloneElement()` 几乎相当于：
 
@@ -60,7 +60,7 @@ Nerv.cloneElement(
 <element.type {...element.props} {...props}>{children}</element.type>
 ```
 
-然而，它也保留了 `ref`。这意味着，如果你通过 `ref` 获取到子级组件时，不会一不小心从祖先组件里窃取了它。你将获得与你新元素相同的 `ref` 。
+然而，它也保留了 `ref`。这意味着，如果你通过 `ref` 获取到子级组件时，不会一不小心从祖先组件里窃取了它。你将获得与你新元素相同的 `ref` 。
 
 ### `isValidElement()`
 
@@ -82,7 +82,7 @@ Nerv.isValidElement(object)
 Nerv.Children.map(children, function[(thisArg)])
 ```
 
-在包含在 `children` 里的每个子级上调用函数，调用的函数的 `this` 设置为 `thisArg` 。如果 `children` 是一个嵌套的对象或数组，它将被遍历。如果 `children` 是 `null` 或 `undefined` ，返回 `null` 或 `undefined` 而不是一个空数组。
+在包含在 `children` 里的每个子级上调用函数，调用的函数的 `this` 设置为 `thisArg` 。如果 `children` 是一个嵌套的对象或数组，它将被遍历。如果 `children` 是 `null` 或 `undefined` ，返回 `null` 或 `undefined` 而不是一个空数组。
 
 #### `Nerv.Children.forEach`
 
@@ -118,7 +118,7 @@ Nerv.Children.toArray(children)
 
 > Note:
 >
-> 当children是扁平列表时，`Nerv.Children.toArray()` 改变key来保留嵌套数组的语义。也就是说，为了在展开时保留嵌套数组的语义，`toArray` 会自动的给数组中每个 key 加了上前缀，以便将每个元素的key被限定到包含它的输入数组。
+> 当children是扁平列表时，`Nerv.Children.toArray()` 改变key来保留嵌套数组的语义。也就是说，为了在展开时保留嵌套数组的语义，`toArray` 会自动的给数组中每个 key 加了上前缀，以便将每个元素的key被限定到包含它的输入数组。
 
 ### `render()`
 
